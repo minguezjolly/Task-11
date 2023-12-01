@@ -1,0 +1,19 @@
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+class Car(Vehicle):
+    def __init__(self, make, model, year, numberOfDoors):
+        super().__init__(make, model, year)
+        self.numberOfDoors = numberOfDoors
+
+    def displayDetails(self):
+        print(f"Car Details:\nMake: {self.make}\nModel: {self.model}\nYear: {self.year}\nNumber of Doors: {self.numberOfDoors}")
+
+# Create an instance of the Car class and set values for its attributes
+myCar = Car("Toyota", "Camry", 2022, 4)
+
+# Display details of the car
+myCar.displayDetails()
